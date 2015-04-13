@@ -1,0 +1,38 @@
+<div class="pull-right" style="margin-bottom: 10px">
+  <form class="form-inline">
+      <label for="search">Wyszukiwanie: </label>
+      <input id="search" type="text" name="search" value="<%= @search_param %>"/>
+      <input type="submit" value="Szukaj"/>
+  </form>
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Numer telefonu</th>
+      <th>Akcje</th>
+    </tr>
+  </thead>
+    <% @contacts.each do |contact| %>
+        <tr>
+          <td>
+            <%= contact.first_name %>
+          </td>
+          <td>
+            <%= contact.last_name %>
+          </td>
+          <td>
+            <%= contact.phone_number %>
+          </td>
+          <td>
+            <%= link_to 'Edytuj', edit_contact_path(contact.id) %>
+            <%= link_to 'Usuń', contact, method: :delete, data: { confirm: 'Czy jesteś pewien?'} %>
+          </td>
+        </tr>
+  <% end %>
+</table>
+<%= will_paginate @contacts %>
+
+<%= link_to 'Dodaj', new_contact_path %>
