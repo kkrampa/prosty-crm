@@ -48,4 +48,19 @@ class ContactsControllerTest < ActionController::TestCase
     assert_redirected_to contacts_path
     assert Contact.all.length, 1
   end
+
+  test 'should remove user' do
+    session[:current_user_id] = @user.id
+    contact = Contact.create(
+        first_name: 'Dummy',
+        last_name: 'Dummy',
+        phone_number: '522552',
+        users_id: @user.id
+    )
+    get :destroy, {:id => contact.id}
+    assert_response 302
+    assert_redirected_to contacts_path
+    assert Contact.all.length, 0
+  end
+
 end
