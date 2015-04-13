@@ -9,6 +9,7 @@ class AccountController < ActionController::Base
     user = User.find_by_username(login_params[:username])
     if user and user.authenticate(login_params[:password])
       session[:current_user_id] = user.id
+      flash[:error] = ''
       redirect_to contacts_path
     else
       flash[:error] = 'Błędny login'
