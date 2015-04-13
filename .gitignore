@@ -20,6 +20,10 @@ build/
 /doc/
 /rdoc/
 
+db/*.sqlite3
+log/*.log
+tmp/**/*
+
 ## Environment normalisation:
 /.bundle/
 /vendor/bundle
