@@ -23,148 +23,148 @@ users = User.create([
 ])
 
 Contact.create([
-               {
-                   first_name: 'Dummy1',
-                   last_name: 'Dummy',
-                   phone_number: '52442255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy1',
-                   last_name: 'Dummy3',
-                   phone_number: '52244255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy2',
-                   last_name: 'Dummy12',
-                   phone_number: '5142255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy231',
-                   last_name: 'Dummy332',
-                   phone_number: '522332355',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy33',
-                   phone_number: '522442255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy13',
-                   last_name: 'Dummy33',
-                   phone_number: '52244255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy112',
-                   phone_number: '5142255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy123',
-                   last_name: 'Dummy332',
-                   phone_number: '5223355',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy33',
-                   phone_number: '522442255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy13',
-                   last_name: 'Dummy33',
-                   phone_number: '52244255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy112',
-                   phone_number: '5142255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy123',
-                   last_name: 'Dummy332',
-                   phone_number: '5223355',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy1',
-                   last_name: 'Dummy',
-                   phone_number: '52442255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy1',
-                   last_name: 'Dummy3',
-                   phone_number: '52244255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy2',
-                   last_name: 'Dummy12',
-                   phone_number: '5142255',
-                   users_id: users.first.id
-               },
-               {
-                   first_name: 'Dummy231',
-                   last_name: 'Dummy332',
-                   phone_number: '522332355',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy33',
-                   phone_number: '522442255',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy13',
-                   last_name: 'Dummy33',
-                   phone_number: '52244255',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy112',
-                   phone_number: '5142255',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy123',
-                   last_name: 'Dummy332',
-                   phone_number: '5223355',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy33',
-                   phone_number: '522442255',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy13',
-                   last_name: 'Dummy33',
-                   phone_number: '52244255',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy12',
-                   last_name: 'Dummy112',
-                   phone_number: '5142255',
-                   users_id: users.second.id
-               },
-               {
-                   first_name: 'Dummy123',
-                   last_name: 'Dummy332',
-                   phone_number: '5223355',
-                   users_id: users.second.id
-               }]
+     {
+         first_name: 'Marcin',
+         last_name: 'Kwiatkowski',
+         phone_number: '52442255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Daniel',
+         last_name: 'Danielewicz',
+         phone_number: '52244255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Wojciech',
+         last_name: 'Bany',
+         phone_number: '5142255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Paweł',
+         last_name: 'Kowal',
+         phone_number: '522332355',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Zbigniew',
+         last_name: 'Krzemiński',
+         phone_number: '522442255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Patryk',
+         last_name: 'Donut',
+         phone_number: '52244255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Katarzyna',
+         last_name: 'Pąk',
+         phone_number: '5142255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Kacper',
+         last_name: 'Kisiel',
+         phone_number: '5223355',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Jakub',
+         last_name: 'Kondrat',
+         phone_number: '522442255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Adam',
+         last_name: 'Adamski',
+         phone_number: '52244255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Błażej',
+         last_name: 'Modrzejewski',
+         phone_number: '5142255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Daniel',
+         last_name: 'Banasiak',
+         phone_number: '5223355',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Damian',
+         last_name: 'Centek',
+         phone_number: '52442255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Andrzej',
+         last_name: 'Gołota',
+         phone_number: '52244255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Krzysztof',
+         last_name: 'Hołowczyc',
+         phone_number: '5142255',
+         users_id: users.first.id
+     },
+     {
+         first_name: 'Jakub',
+         last_name: 'Guzik',
+         phone_number: '522332355',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Tomasz',
+         last_name: 'Gollob',
+         phone_number: '522442255',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Adam',
+         last_name: 'Małysz',
+         phone_number: '52244255',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Kamil',
+         last_name: 'Stoch',
+         phone_number: '5142255',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Robert',
+         last_name: 'Kubica',
+         phone_number: '5223355',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Hubert',
+         last_name: 'Urbański',
+         phone_number: '522442255',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Zbigniew',
+         last_name: 'Wodecki',
+         phone_number: '52244255',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Joanna',
+         last_name: 'Krupa',
+         phone_number: '5142255',
+         users_id: users.second.id
+     },
+     {
+         first_name: 'Anna',
+         last_name: 'Mucha',
+         phone_number: '5223355',
+         users_id: users.second.id
+     }]
 )
