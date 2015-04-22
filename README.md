@@ -1,5 +1,8 @@
 # README
 
+Prosta aplikacja umożliwiająca zarządzanie kontaktami - CRM(Customer Relationship Management).
+
+
 * Ruby version: 2.2.0
 
 * Ruby on Rails version: 4.2.0

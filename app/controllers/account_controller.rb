@@ -42,6 +42,6 @@ class AccountController < ActionController::Base
   end
 
   def register_params
-    params.require(:user).permit(:username, :password, :password_confirmation, :email)
+    params.require(:user).permit(:username, :password, :password_confirmation)
   end
 end

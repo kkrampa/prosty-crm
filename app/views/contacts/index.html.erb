@@ -2,7 +2,7 @@
   <form class="form-inline">
       <label for="search">Wyszukiwanie: </label>
       <input id="search" type="text" name="search" value="<%= @search_param %>"/>
-      <input type="submit" value="Szukaj"/>
+      <input class="btn btn-default" type="submit" value="Szukaj"/>
   </form>
 </div>
 
@@ -12,6 +12,8 @@
       <th>Imię</th>
       <th>Nazwisko</th>
       <th>Numer telefonu</th>
+      <th>Email</th>
+      <th>Adres</th>
       <th>Akcje</th>
     </tr>
   </thead>
@@ -27,6 +29,13 @@
             <%= contact.phone_number %>
           </td>
           <td>
+            <%= contact.email %>
+          </td>
+          <td>
+            <%= contact.street %> <%= contact.number %> <br />
+            <%= contact.post_code %> <%= contact.city %>
+          </td>
+          <td>
             <%= link_to 'Edytuj', edit_contact_path(contact.id) %>
             <%= link_to 'Usuń', contact, method: :delete, data: { confirm: 'Czy jesteś pewien?'} %>
           </td>
@@ -35,4 +44,4 @@
 </table>
 <%= will_paginate @contacts %>
 
-<%= link_to 'Dodaj kontakt', new_contact_path, class: 'btn btn-primary' %>
+<%= link_to 'Dodaj kontakt', new_contact_path, class: 'btn btn-default' %>

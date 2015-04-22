@@ -6,8 +6,11 @@ class ContactsController < ActionController::Base
   def index
     if params[:search]
       @contacts = Contact.where(
-          'users_id=? AND (first_name like ? OR last_name like ? OR phone_number like ?)',
-          @user.id, "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"
+          'users_id=? AND (first_name like ? OR last_name like ? OR phone_number like ? OR street like ? OR city like ?
+           OR post_code like ? OR number like ? OR email like ?)',
+          @user.id, "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%, %#{params[:search]}%",
+          "%#{params[:search]}%", "%#{params[:search]}%","%#{params[:search]}%", "%#{params[:search]}%",
+          "%#{params[:search]}%"
       ).paginate(:page => params[:page])
       @search_param = params[:search]
     else
@@ -21,6 +24,7 @@ class ContactsController < ActionController::Base
 
   def create
     @contact = Contact.create(contact_params)
+    flash[:success] = 'Kontakt dodano pomyślnie'
     redirect_to contacts_path
   end
 
@@ -29,11 +33,13 @@ class ContactsController < ActionController::Base
 
   def update
     @contact.update(contact_params)
+    flash[:success] = 'Kontakt edytowano pomyślnie'
     redirect_to contacts_path
   end
 
   def destroy
     @contact.destroy
+    flash[:success] = 'Kontakt usunięto pomyślnie'
     redirect_to contacts_url
   end
 
@@ -54,6 +60,7 @@ class ContactsController < ActionController::Base
     end
 
     def contact_params
-      params.require(:contact).permit(:first_name, :last_name, :phone_number, :users_id)
+      params.require(:contact).permit(:first_name, :last_name, :phone_number,
+                                      :email, :city, :street, :number, :post_code, :users_id)
     end
 end

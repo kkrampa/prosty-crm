@@ -12,19 +12,18 @@ class AccountControllerTest < ActionController::TestCase
   end
 
   test 'should return bad response' do
-    post :register, user: { email: '' }
+    post :register, user: { username: '' }
     assert_response 400
     assert_not_nil assigns :user
     user = assigns :user
     assert_not_nil user.errors
-    assert user.errors.count == 4
+    assert user.errors.count == 3
     assert User.all.count == 0
   end
 
   test 'should return password confirmation fails' do
     post :register, user: {
                       username: 'dummy',
-                      email: 'dummy@dummy.com',
                       password: 'dummy12',
                       password_confirmation: 'dummy13'
                     }
@@ -34,14 +33,12 @@ class AccountControllerTest < ActionController::TestCase
     assert_not_empty errors[:password_confirmation]
     assert_empty errors[:username]
     assert_empty errors[:password]
-    assert_empty errors[:email]
     assert User.all.count == 0
   end
 
   test 'should register user' do
     post :register, user: {
                       username: 'dummy',
-                      email: 'dummy@dummy.com',
                       password: 'dummy13',
                       password_confirmation: 'dummy13'
                     }
@@ -49,20 +46,17 @@ class AccountControllerTest < ActionController::TestCase
     assert_redirected_to :login
     user = User.all
     assert user.count == 1
-    assert user[0].email == 'dummy@dummy.com'
   end
 
   test 'should return username in use' do
     user = User.new(
         username: 'dummy',
-        email: 'dummy1@dummy.com',
         password: 'dummy13',
         password_confirmation: 'dummy13'
     )
     user.save
     post :register, user: {
                       username: 'dummy',
-                      email: 'dummy@dummy.com',
                       password: 'dummy13',
                       password_confirmation: 'dummy13'
                   }
@@ -87,7 +81,6 @@ class AccountControllerTest < ActionController::TestCase
   test 'should return bad password' do
     User.create(
         username: 'dummy',
-        email: 'dummy1@dummy.com',
         password: 'dummy13',
         password_confirmation: 'dummy13'
     )
@@ -98,7 +91,6 @@ class AccountControllerTest < ActionController::TestCase
   test 'should be logged in' do
     user = User.create(
         username: 'dummy',
-        email: 'dummy1@dummy.com',
         password: 'dummy13',
         password_confirmation: 'dummy13'
     )
@@ -110,7 +102,6 @@ class AccountControllerTest < ActionController::TestCase
   test 'should be log out' do
     user = User.create(
         username: 'dummy',
-        email: 'dummy1@dummy.com',
         password: 'dummy13',
         password_confirmation: 'dummy13'
     )
