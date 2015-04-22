@@ -1,9 +1,14 @@
 <%= bootstrap_form_for(@contact) do |f| %>
     <%= f.hidden_field :users_id %>
-    <%= f.text_field :first_name %>
-    <%= f.text_field :last_name %>
-    <%= f.phone_field :phone_number %>
+    <%= f.text_field :first_name, label: 'Imię' %>
+    <%= f.text_field :last_name, label: 'Nazwisko' %>
+    <%= f.phone_field :phone_number, label: 'Nr telefonu' %>
+    <%= f.email_field :email, label: 'Email' %>
+    <%= f.text_field :street, label: 'Ulica' %>
+    <%= f.text_field :number, label: 'Nr domu' %>
+    <%= f.text_field :post_code, label: 'Kod pocztowy' %>
+    <%= f.text_field :city, label: 'Miejscowość' %>
     <%= f.submit 'Edytuj' %>
+    <%= link_to 'Powrót', contacts_path, class: 'btn btn-default' %>
 <% end %>
 
-<%= link_to 'Powrót', contacts_path, class: 'btn btn-default' %>

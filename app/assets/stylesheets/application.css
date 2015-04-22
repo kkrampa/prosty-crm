@@ -17,3 +17,9 @@
 /*
  *= require rails_bootstrap_forms
  */
+
+
+.required:after {
+    content: " *";
+    color: red;
+}

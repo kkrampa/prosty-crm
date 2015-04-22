@@ -1,5 +1,5 @@
 <%= bootstrap_form_tag(url: 'login') do |f| %>
-    <%= f.text_field :username %>
-    <%= f.password_field :password %>
+    <%= f.text_field :username, label: 'Login' %>
+    <%= f.password_field :password, label: 'Hasło' %>
     <%= f.submit 'Zaloguj się' %>
 <% end %>

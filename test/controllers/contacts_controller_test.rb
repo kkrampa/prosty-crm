@@ -3,7 +3,6 @@ class ContactsControllerTest < ActionController::TestCase
   def setup
     @user = User.create(
         username: 'dummy',
-        email: 'dummy1@dummy.com',
         password: 'dummy13',
         password_confirmation: 'dummy13'
     )
